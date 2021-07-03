@@ -805,6 +805,8 @@
         $('.denglong').css('display', 'block');
     }
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
 
     
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -2070,55 +2072,7 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
         
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="2211665459"
-                   fixed='true'
-                   autoplay='true'
-                   theme='#42b983'
-                   loop='all'
-                   order='list'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css">
 
@@ -2257,6 +2211,8 @@
     </div>
     
 <div class="progress-bar"></div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
 </footer>
 
     <!-- 搜索遮罩框 -->
@@ -2371,8 +2327,7 @@ $(function () {
 </div>
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayedist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayemin.js"></script>
+   
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Metinmin.js"></script>
     <!-- left side bar -->
@@ -2633,7 +2588,7 @@ $(function () {
     #RightDownBtn {
         position: fixed;
         left: 1.875rem;
-        bottom: 1.875rem;
+        bottom: 9rem;
         padding: 0.3125rem 0.625rem;
         background: #fff;
         border-radius: 0.1875rem;
@@ -2798,7 +2753,7 @@ $(function () {
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
-                   type="playlist"
+                   type="album"
                    id="2211665459"
                    fixed='true'
                    autoplay='true'
@@ -2815,14 +2770,24 @@ $(function () {
 
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+
+    <script src="/libs/aplayer/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+
+
+
+
+   
+    <script src="/"></script>
 
     <script src="/"></script>
     <script src="/"></script>
-    <script src="https://cdn.jsdelivr.net/gh/bynotes/texiao/source/js/qipao.js"></script>
-    <script src="/"></script>
-    <script src="/"></script>
-        <!--动态老婆背景-->
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayedist/APlayer.min.css">
+
 <!--动态线条背景-->
 <script type="text/javascript"
 color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
@@ -2877,6 +2842,7 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
         <script src="/js/matery.js"></script>
         <!-- https://app.webpushr.com/optin/button -->
         <div id="webpushr-subscription-button"></div>
+        <div id="musicmobbtn"></div>
         <!-- start webpushr tracking code --> 
 <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
     fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
@@ -3140,10 +3106,9 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-    
+
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4e0682d7-9c26-4639-8d0c-38531869a7ee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-</script>
+
 
 <script>https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/buttons.min.css</script>
 <!--鼠标尾巴效果-->
@@ -3154,7 +3119,6 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 <link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/fsh001/szgotop.css" />
 <div class="back-to-top cd-top faa-float animated cd-is-visible" style="top: -999px;"></div>
 
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 
     </div>
 </div>
