@@ -202,8 +202,6 @@
 
 
 
-
-
  <div id="loading-container">
      <p class="loading-text">玩命加载中 . . . </p> 
      <div class="loading-image">
@@ -836,6 +834,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/search" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>s</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
@@ -1023,6 +1032,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/search" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			s
 		</a>
           
         </li>
@@ -2092,6 +2112,67 @@
     
 
     
+        
+    <div id="SOHUCS"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var loadChangYan = function () {
+                var appid = 'cyvvGwRA9';
+                var conf = 'prod_590a2741b1a9b5a34c1f48a24cacb899';
+                var width = window.innerWidth || document.documentElement.clientWidth;
+                if (width < 960) {
+                    var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.charset = 'utf-8';
+                    script.id = 'changyan_mobile_js';
+                    script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid +
+                        '&conf=' + conf;
+                    head.appendChild(script);
+                } else {
+                    var loadJs = function (d, a) {
+                        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+                        var b = document.createElement("script");
+                        b.setAttribute("type", "text/javascript");
+                        b.setAttribute("charset", "UTF-8");
+                        b.setAttribute("src", d);
+                        if (typeof a === "function") {
+                            if (window.attachEvent) {
+                                b.onreadystatechange = function () {
+                                    var e = b.readyState;
+                                    if (e === "loaded" || e === "complete") {
+                                        b.onreadystatechange = null;
+                                        a()
+                                    }
+                                }
+                            } else {
+                                b.onload = a
+                            }
+                        }
+                        c.appendChild(b)
+                    };
+                    loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js", function () {
+                        window.changyan.api.config({
+                            appid: appid,
+                            conf: conf
+                        })
+                    });
+                }
+            }
+
+            loadChangYan();
+        }
+        <!-- 代码1：放在页面需要展示的位置  -->
+<!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+<!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+<!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+<!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+<script type="text/javascript" charset="utf-8" src="https://cy-cdn.kuaizhan.com/js/??lib/jquery.js,changyan.labs.https.js?appid=cyvvGwRA9"></script>
+    </script>
+
+
+    
 
     
         <style>
@@ -2913,9 +2994,18 @@ $(function () {
 </div>
 
 
-   
+    
+    <script src="/libs/aplayer/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"></script>
+<!-- require APlayer -->
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<span id="music"></span>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js"></script>
 
-
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/APlayer.min.css"></script>
 <!--动态线条背景-->
 <script type="text/javascript"
 color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
@@ -2956,30 +3046,7 @@ color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
             daovoice('update');
         </script>
         
-        <div class="menu-V">
-            <div class="container-M">
-                <div class="toggle"></div>
-            </div>
-            <svg aria-hidden="true" style="position: absolute;overflow: hidden;width: 0;height: 0">
-                <symbol id="icon-sun" viewBox="0 0 1024 1024">
-                    <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path>
-                </symbol>
-                <symbol id="icon-moon" viewBox="0 0 1024 1024">
-                    <path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path>
-                </symbol>
-            </svg>
-            <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
-                <svg width="35" height="35" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg>
-            </a>
-            <a href="/messages" class="icon-V hidden" title="前往留言板">
-                <svg t="1612414295685" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="82057" width="35" height="35"><path d="M114.0736 546.304l751.1552-371.712-529.0496 444.7232zM951.7568 159.8976L556.0832 678.4l348.8768 58.9312 21.9648-14.592z" fill="#FBC07C" p-id="82058"></path><path d="M874.9056 216.9344l-477.6448 423.5264 99.7888 212.1728 8.6528-186.9312z" fill="#FC9553" p-id="82059"></path><path d="M542.72 888.3712v-185.0368l10.9056-15.104 115.712 17.2544z" fill="#E56234" p-id="82060"></path><path d="M962.4064 96.3072c-1.8432-1.8432-4.0448-3.072-6.3488-3.84-4.0448-1.6896-8.704-1.7408-12.9536 0.2048-7.2192 3.3792-722.5856 339.6096-874.9568 410.368a27.23328 27.23328 0 0 0-15.7696 26.6752 27.09504 27.09504 0 0 0 19.2512 24.2688l253.9008 78.1312 164.4032 312.7296a16.44032 16.44032 0 0 0 14.592 8.8064c0.1024 0 0.2048-0.0512 0.3072-0.0512 0.8192 0.1024 1.6384 0.2048 2.4576 0.2048 5.4272 0 10.6496-2.6112 13.8752-7.2704l148.7872-214.8864c5.888-7.3728 10.2912-13.056 13.5168-17.5104l217.7536 38.0928c3.072 0.9728 6.2976 1.4336 9.472 1.4336 6.1952 0 12.3392-1.792 17.5616-5.3248a31.6928 31.6928 0 0 0 14.0288-25.088l24.7808-611.9424c0.0512-0.768-0.0512-1.536-0.1024-2.2528 0.4608-4.5056-1.024-9.2672-4.5568-12.7488zM852.48 169.216L332.6976 602.2144l-243.712-74.9568C217.1392 467.6096 651.4688 263.6288 852.48 169.216z m-496.9472 453.9904l481.8432-401.408-320.0512 404.7872-24.6272 30.8224-2.3552 4.7104v217.4976l-134.8096-256.4096z m289.8432 89.9584l-124.3648 179.5584v-206.8992l128 22.3744c-1.792 2.4576-3.1744 4.352-3.6352 4.9664z m266.1888 8.96v0.0512c0 0.1536 0 0.4608-0.4096 0.7168-0.3584 0.256-0.6656 0.1536-0.8192 0.1024l-1.3312-0.512-229.5296-40.1408-146.4832-26.0608 7.6288-9.6256L934.5536 153.6l-22.9888 568.5248z" fill="#333333" p-id="82061"></path></svg>
-        
-            </a>
-            <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="icon-V hidden" id="toComment" title="前往评论区">
-                <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38"><path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path><path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path><path d="M556.202667 770.048h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V362.837333s-59.733333 392.533333-724.309333 314.709334v63.488a29.013333 29.013333 0 0 0 28.842666 29.013333h253.098667v90.453333z" fill="#F2C182" p-id="1882"></path><path d="M619.008 632.32l101.888-35.157333-131.754667-76.117334 29.866667 111.274667zM891.904 148.992a61.44 61.44 0 0 0-84.138667 22.528l-19.968 34.133333 106.666667 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-22.528-84.138667z" fill="#69BAF9" p-id="1883"></path><path d="M775.338667 198.775467l131.669333 76.032-186.026667 322.218666-131.6864-76.032z" fill="#F7FBFF" p-id="1884"></path><path d="M775.168 198.826667l-5.290667 9.216 59.221334 34.133333a34.133333 34.133333 0 0 1 12.458666 46.592l-139.946666 242.346667a34.133333 34.133333 0 0 1-46.762667 12.629333l-59.050667-34.133333-6.656 11.434666 88.746667 51.2L720.896 597.333333l186.026667-322.56z" fill="#D8E3F0" p-id="1885"></path><path d="M616.448 622.592l2.56 9.728 101.888-35.157333-44.885333-25.941334-59.562667 51.370667zM891.904 148.992c-1.024 0-2.218667-0.853333-3.242667-1.536A61.610667 61.610667 0 0 1 887.466667 204.8l-19.968 34.133333-73.728-42.496-5.12 8.704 106.666666 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-23.381333-83.626667z" fill="#599ED4" p-id="1886"></path><path d="M265.898667 417.621333H494.933333a17.066667 17.066667 0 1 0 0-34.133333H265.898667a17.066667 17.066667 0 1 0 0 34.133333zM265.898667 533.504H494.933333a17.066667 17.066667 0 0 0 0-34.133333H265.898667a17.066667 17.066667 0 0 0 0 34.133333z" fill="#3D3D63" p-id="1887"></path><path d="M959.488 354.645333a99.84 99.84 0 0 0-23.722667-127.488 78.677333 78.677333 0 0 0-142.848-64.170666l-11.605333 20.138666a17.066667 17.066667 0 0 0-20.821333 7.168l-32.085334 55.466667H142.677333a46.250667 46.250667 0 0 0-45.909333 46.08v449.194667a46.08 46.08 0 0 0 45.909333 46.08h236.032v73.386666a17.066667 17.066667 0 0 0 8.362667 14.848 17.066667 17.066667 0 0 0 8.704 2.218667 17.066667 17.066667 0 0 0 8.362667-2.218667l156.672-88.234666h248.32a46.08 46.08 0 0 0 46.08-46.08V398.677333L921.6 283.306667a17.066667 17.066667 0 0 0-4.266667-21.504l1.877334-3.413334a65.365333 65.365333 0 0 1 10.410666 79.189334l-53.077333 91.989333a56.832 56.832 0 0 0 20.821333 77.653333 17.066667 17.066667 0 0 0 24.234667-6.314666 17.066667 17.066667 0 0 0-6.997333-23.04 23.04 23.04 0 0 1-8.362667-31.061334z m-138.410667 386.389334a11.946667 11.946667 0 0 1-11.946666 11.946666H556.202667a17.066667 17.066667 0 0 0-8.362667 2.218667l-134.997333 76.117333v-61.269333a17.066667 17.066667 0 0 0-17.066667-17.066667H142.677333a11.946667 11.946667 0 0 1-11.776-11.946666V291.84a11.946667 11.946667 0 0 1 11.776-11.946667h565.930667L574.464 512a17.066667 17.066667 0 0 0-1.706667 12.970667L597.333333 615.253333H265.898667a17.066667 17.066667 0 1 0 0 34.133334h352.938666a17.066667 17.066667 0 0 0 5.802667 0l102.4-35.328a17.066667 17.066667 0 0 0 9.216-7.509334l85.333333-147.968z m-204.8-184.661334l63.829334 36.864-49.322667 17.066667z m206.848-170.666666v1.365333l-108.373333 186.709333-102.4-59.050666L781.482667 221.866667l102.4 59.050666z m76.458667-161.28L887.466667 244.224l-76.970667-44.373333 11.264-19.797334a44.544 44.544 0 1 1 77.141333 44.544z" fill="#3D3D63" p-id="1888"></path></svg>
-            </a>
-        </div>
-              
+
 
       <script src="https://cdn.bootcdn.net/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
         <script src="/libs/materialize/materialize.min.js"></script>
@@ -3249,6 +3316,10 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 </script>
 
 
+<script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4e0682d7-9c26-4639-8d0c-38531869a7ee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</script>
+
 
 <script>
     (function(h,o,t,j,a,r){
@@ -3259,10 +3330,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
-    <script>
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4e0682d7-9c26-4639-8d0c-38531869a7ee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-    </script>
+</script>
 
 <script>https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/buttons.min.css</script>
 <!--鼠标尾巴效果-->
